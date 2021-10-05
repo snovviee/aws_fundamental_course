@@ -1,0 +1,20 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Week0 EC2 instance launch",
+  "Resources" : {
+    "MyEC2Instance" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "ImageId" : "ami-00dfe2c7ce89a450b",
+        "InstanceType" : "t2.micro",
+        "KeyName" : "aws_fundamental_course"
+      }
+    }
+  },
+  "Outputs" : {
+    "InstanceID" : {
+      "Description": "The Instance ID",
+      "Value" : { "Ref" : "MyEC2Instance" }
+    }
+  }
+}
